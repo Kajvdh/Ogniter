@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>@yield('title') - Online Stats for Ogame</title>
+    <title>@yield('title') - Online Stats for Ogame by Kaj</title>
     <meta name="description" content="@yield('description'). Information about the Fantasy Browser Game Ogame.">
     <meta name="author" content="Donato C. Laynes Gonzales">
     <base href="{{ $baseUrl }}">
@@ -33,37 +33,27 @@
     <link rel="shortcut icon" href="{{ $cdnHost }}img/favicon.ico">
     @yield('head')
     @if ($environment=='production')
-        <script type="text/javascript">
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-34506622-1']);
-            _gaq.push(['_trackPageview']);
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-                //ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71888810-4"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-71888810-4');
         </script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="{{ $cdnHost }}js/jquery-1.7.2.min.js"><\/script>')</script>
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Kreela_1 -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-4097649742400196"
+            data-ad-slot="9803953975"
+            data-ad-format="auto"></ins>
         <script>
-            (adsbygoogle = window.adsbygoogle || []).push({
-                google_ad_client: "ca-pub-1243866001028722",
-                enable_page_level_ads: true
-            });
+            (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
-    @elseif($environment=='staging')
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-76792716-1', 'auto');
-            ga('send', 'pageview');
-        </script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="{{ $cdnHost }}>js/jquery-1.7.2.min.js"><\/script>')</script>
     @else
         <script src="{{ $cdnHost }}js/jquery-1.7.2.min.js"></script>
     @endif
@@ -237,7 +227,7 @@
     <hr>
     <footer>
         <p class="pull-left">
-            <a href="http://buscandoquehacer.com" target="_blank"> &copy; Donato Laynes</a> 2012-2016 | <a href="humans">Collaborators</a></p>
+            <a href="http://buscandoquehacer.com" target="_blank"> &copy; Donato Laynes</a> 2012-2016, revived by Kaj Van der Hallen | <a href="humans">Collaborators</a></p>
         <p class="pull-right">
             <a href="http://www.gameforge.com" target="_blank">{{ $lang->trans('ogniter.og_game_created_by') }}</a>.</p>
     </footer>
@@ -262,3 +252,4 @@
 </script>
 </body>
 </html>
+

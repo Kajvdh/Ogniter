@@ -82,6 +82,9 @@ class PatchUniverses extends Command
             $duration = $timer->getItem('add-history-table-'.$universe_id);
             $this->comment("Creating the history table in universe #".$universe_id." (".$universe->domain.") took ". $duration->getDifference()."s");
 
+$table_name = Universe::getHighscoreTableName($language, $universe_id);
+            DB::unprepared('ALTER TABLE '.$table_name.' DROP PRIMARY KEY, ADD INDEX `idx` (`entity_id`, `type`, `category`, `last_update`) USING BTREE');
+
             //Rellenar tablas de updates
             //$timer->addTask('add-update-records-'.$universe_id);
             //$u = new Update();

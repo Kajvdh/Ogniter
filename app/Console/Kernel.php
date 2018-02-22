@@ -65,24 +65,24 @@ class Kernel extends ConsoleKernel
 
         $schedule->command('ogame:alliance-queue')->cron('*/2 * * * *')
             ->withoutOverlapping()
-            ->sendOutputTo(\storage_path('logs/alliances.log'));
+            ->appendOutputTo(\storage_path('logs/alliances.log'));
         $schedule->command('ogame:player-queue')->cron('*/2 * * * *')
             ->withoutOverlapping()
-            ->sendOutputTo(\storage_path('logs/players.log'));
+            ->appendOutputTo(\storage_path('logs/players.log'));
         $schedule->command('ogame:galaxy-queue')->cron('*/2 * * * *')
             ->withoutOverlapping()
-            ->sendOutputTo(\storage_path('logs/planets.log'));
+            ->appendOutputTo(\storage_path('logs/planets.log'));
         $schedule->command('ogame:universe-queue')->cron('*/2 * * * *')
-            ->sendOutputTo(\storage_path('logs/universes.log'));
+            ->appendOutputTo(\storage_path('logs/universes.log'));
         $schedule->command('ogame:highscore-queue')->cron('*/2 * * * *')
-            ->sendOutputTo(\storage_path('logs/highscore.log'));
+            ->appendOutputTo(\storage_path('logs/highscore.log'));
         $schedule->command('ogame:daily-stats')->daily()
-            ->sendOutputTo(\storage_path('logs/dailystats.log'));
+            ->appendOutputTo(\storage_path('logs/dailystats.log'));
         $schedule->command('ogame:clean-update-errors')->cron('0 * * * *')
-            ->sendOutputTo(\storage_path('logs/updaterrors.log'));
+            ->appendOutputTo(\storage_path('logs/updaterrors.log'));
         $schedule->command('ogame:install-universe-queue')->cron('*/4 * * * *')
             ->withoutOverlapping()
-            ->sendOutputTo(\storage_path('logs/install-queue.log'));
+            ->appendOutputTo(\storage_path('logs/install-queue.log'));
 
         //how to install new universes:
         //Update the server name list configuration: ogame_servers.php (New France universe name)
