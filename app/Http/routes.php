@@ -20,6 +20,7 @@ Route::get('/terms-of-use', '\App\Http\Controllers\Classic\Site\IndexController@
 Route::get('/humans', '\App\Http\Controllers\Classic\Site\IndexController@humans');
 
 Route::group(['prefix'=>'site'], function(){
+    Route::get('/donators', '\App\Http\Controllers\Classic\Site\IndexController@donators');
     Route::get('/faq', '\App\Http\Controllers\Classic\Site\IndexController@faq');
     Route::get('/recommended/{order_by?}', '\App\Http\Controllers\Classic\Site\WebsiteController@index');
     Route::get('/detail/{id}', '\App\Http\Controllers\Classic\Site\WebsiteController@detail');

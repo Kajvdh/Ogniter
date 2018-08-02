@@ -13,6 +13,7 @@ class IndexController extends Controller {
             '\App\Http\ViewComposers\Classic\DefaultComposer'  => [
                 'classic.pages.site.index',
                 'classic.pages.site.faq',
+                'classic.pages.site.donators',
                 'classic.pages.site.terms_of_use',
                 'classic_pages.site_privacy_policy',
                 'classic.pages.site.humans'
@@ -39,6 +40,10 @@ class IndexController extends Controller {
 
     function faq(){
         return view('classic.pages.site.faq');
+    }
+
+    function donators(){
+        return view('classic.pages.site.donators');
     }
 
     function humans(){

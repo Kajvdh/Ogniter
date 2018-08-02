@@ -281,7 +281,7 @@ $language['title_top_n_alliances'] = 'Ogniter. Top %n% Alianças';
 $language['description_top_n_alliances'] = 'Ogniter. Lista de alianças no top %n%';
 
 $language['pls_donate'] = 'Ogniter é um portal web livre cujos mensal custos são mais elevados do que a média de um servidor web. <br />
-             Eu abrir esta seção para usuários interessados ​​em colaborar com a manutenção e desenvolvimento do ogniter.org. Inclua seu nome e E mail!';
+             Eu abrir esta seção para usuários interessados ​​em colaborar com a manutenção e desenvolvimento do ogniter.eu. Inclua seu nome e E mail!';
 
 $language['share'] = 'Compartilhar';
 $language['planets'] = 'Planetas';

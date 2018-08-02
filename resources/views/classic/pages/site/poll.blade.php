@@ -86,6 +86,6 @@
 
     <div class="span3">
         @include('classic.partials.shared.statistics')
-        @include('classic.partials.twitter')
+        @include('classic.partials.donate')
     </div>
 @endsection

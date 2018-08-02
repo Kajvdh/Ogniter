@@ -329,7 +329,7 @@ $language['description_top_n_alliances'] = 'Ogniter. Top %n% Alianțe';
 $language['pls_donate'] = 'Ogniter este un site web de acces gratuit, cu
 costuri de plată lunare peste medie pachetul de web-hosting.<br />
 Acceptam donatii din partea utilizatorilor care doresc să
-coopereze cu menținerea și dezvoltarea de noi caracteristici pe ogniter.org.<br
+coopereze cu menținerea și dezvoltarea de noi caracteristici pe ogniter.eu.<br
 /> Nu uitați să includeți numele și adresa dvs. de email!';
 
 $language['share'] = 'Share';

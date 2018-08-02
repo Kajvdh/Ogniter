@@ -310,7 +310,7 @@
     </div>
     <div class="span3">
         @include('classic.partials.servers.sidebar')
-        @include('classic.partials.twitter')
+        @include('classic.partials.donate')
     </div>
 @endsection
 

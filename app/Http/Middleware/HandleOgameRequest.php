@@ -32,6 +32,10 @@ class HandleOgameRequest
 
         $countryCode = $path[0];
 
+        //if ($countryCode && $countryCode == "yu") {
+        //    $countryCode = "ba";
+        //}
+
         do {
             if(!$countryCode || in_array($countryCode,
                     ['site','terms-of-use','privacy-policy','humans', '_debugbar','games', 'logs-z-secret'])){

@@ -7,17 +7,18 @@ use App\Ogniter\Model\HashTable;
 class Language extends HashTable {
 
     protected $records = array(
-        //'es' => ['flag'=>'es', 'desc' => 'Español', 'slug'=>'spanish' ],
         'en' => ['flag'=>'gb', 'desc'=> 'English', 'slug'=>'english' ],
-        //'de' => ['flag'=>'de', 'desc' => 'Deutsch', 'slug'=>'german' ],
-        //'fr' => ['flag'=>'fr', 'desc' => 'Français', 'slug'=>'french' ],
-        //'ru' => ['flag'=>'ru', 'desc' => 'русский', 'slug'=>'russian' ],
-        //'pt' => ['flag'=>'pt', 'desc' => 'Português', 'slug'=>'portuguese' ],
-        //'pl' => ['flag'=>'pl', 'desc'=>'Polski', 'slug'=>'polish' ],
-        //'tr' => ['flag'=>'tr', 'desc' => 'Türkçe', 'slug'=>'turkish' ],
-        //'it' => ['flag'=>'it','desc'=>'Italiano', 'slug'=>'italian' ],
-        //'ro' => ['flag'=>'ro', 'desc' =>'Romanian', 'slug'=>'romanian' ],
-        //'cz' => ['flag'=>'cz','desc'=>'čeština', 'slug'=>'czech' ],
+        'nl' => ['flag'=>'nl', 'desc'=> 'Nederlands', 'slug'=>'nederlands' ],
+        'de' => ['flag'=>'de', 'desc' => 'Deutsch', 'slug'=>'german' ],
+        'es' => ['flag'=>'es', 'desc' => 'Español', 'slug'=>'spanish' ],
+        'fr' => ['flag'=>'fr', 'desc' => 'Français', 'slug'=>'french' ],
+        'ru' => ['flag'=>'ru', 'desc' => 'русский', 'slug'=>'russian' ],
+        'pt' => ['flag'=>'pt', 'desc' => 'Português', 'slug'=>'portuguese' ],
+        'pl' => ['flag'=>'pl', 'desc'=>'Polski', 'slug'=>'polish' ],
+        'tr' => ['flag'=>'tr', 'desc' => 'Türkçe', 'slug'=>'turkish' ],
+        'it' => ['flag'=>'it','desc'=>'Italiano', 'slug'=>'italian' ],
+        'ro' => ['flag'=>'ro', 'desc' =>'Romanian', 'slug'=>'romanian' ],
+        'cz' => ['flag'=>'cz','desc'=>'čeština', 'slug'=>'czech' ],
     );
 
     function getDefaultLanguageCode()
@@ -30,5 +31,13 @@ class Language extends HashTable {
             return $code;
         }
         return 'en';
+    }
+
+    function getPreferredOrDefaultLanguageCode($preferredLanguageCode)
+    {
+        if (isset($preferredLanguageCode) && isset($this->values[$preferredLanguageCode])) {
+            return $preferredLanguageCode;
+        }
+        return $this->getDefaultLanguageCode();
     }
 }

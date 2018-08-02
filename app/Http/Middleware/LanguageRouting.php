@@ -40,8 +40,9 @@ class LanguageRouting
             \App::abort(404, 'Resource not found');
         }
         
-        \App::setLocale($languageModel->getDefaultLanguageCode());
-
+//        \App::setLocale($languageModel->getDefaultLanguageCode());
+        \App::setLocale($languageModel->getPreferredOrDefaultLanguageCode($lang));
+        \Session::put('applocale, $languageModel->getPreferredOrDefaultLanguageCode($lang)');
         return $next($request);
     }
 }

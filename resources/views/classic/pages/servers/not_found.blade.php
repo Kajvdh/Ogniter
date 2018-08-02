@@ -25,7 +25,7 @@
                 width="100%" height="650" frameborder="0"></iframe>
     </div>
     <div class="span4">
-        @include('classic.partials.twitter')
+        @include('classic.partials.donate')
         @include('classic.partials.home.countrylist')
     </div>
 @endsection

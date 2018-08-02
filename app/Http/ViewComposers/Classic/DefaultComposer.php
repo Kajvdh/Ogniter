@@ -47,11 +47,16 @@ class DefaultComposer {
         ]);
 
         $baseDomain = env('APP_URL');
+
         $currentLanguageId = \App::getLocale();
 
         $fullUrl = $this->request->fullUrl();
         $url = parse_url($fullUrl);
-
+        $urlLanguageId = substr($url['host'],0,strpos($url['host'],'.'));
+        if (strlen($urlLanguageId) == 2) {
+              $currentLanguageId = $urlLanguageId;
+              \App::setLocale($currentLanguageId);
+        }
         $currentPath = str_replace($this->request->root(), '', $fullUrl);
         $baseScheme = $url['scheme'];
 

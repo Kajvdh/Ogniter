@@ -303,7 +303,7 @@ $language['title_top_n_alliances'] = 'Ogniter. Top %n% Alliances';
 $language['description_top_n_alliances'] = 'Ogniter. Top %n% classement alliances';
 
 $language['pls_donate'] = 'Ogniter est un site internet gratuit, qui nécessite des frais d\'hébergement supérieurs à la moyenne.<br />
-            Nous acceptons dès à présent les dons d\'utilisateurs qui souhaitent coopérer pour le maintien et le développement de nouvelles fonctionnalités sur ogniter.org.<br /> N\'oubliez pas d\'inclure votre nom et votre email !';
+            Nous acceptons dès à présent les dons d\'utilisateurs qui souhaitent coopérer pour le maintien et le développement de nouvelles fonctionnalités sur ogniter.eu.<br /> N\'oubliez pas d\'inclure votre nom et votre email !';
 
 $language['share'] = 'Partager';
 $language['planets'] = 'Planètes';

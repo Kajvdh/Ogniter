@@ -40,7 +40,7 @@
         @include('classic.partials.home.worldtop100')
     </div>
     <div class="span4">
-        @include('classic.partials.twitter')
+        @include('classic.partials.donate')
         @include('classic.partials.shared.statistics')
     </div>
 @endsection

@@ -85,7 +85,7 @@ $a = str_replace(array('%server%','%domain%'), array($currentUniverse->local_nam
     </div>
     <div class="span3">
         @include('classic.partials.servers.popular_searches')
-        @include('classic.partials.twitter')
+        @include('classic.partials.donate')
     </div>
 @endsection
 
