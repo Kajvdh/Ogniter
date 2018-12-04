@@ -92,6 +92,6 @@ return [
 
         'Halloween' => array('code'=>202,'weight'=>0) //Apparently, Ogame won't last for too long
     ],
-    'private_servers' => [691,692,803,802],
+    'private_servers' => [671,691,692,803,802],
     'temporal_name' => 'Temp Name'
 ];
